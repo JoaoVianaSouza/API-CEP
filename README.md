@@ -1,52 +1,89 @@
-# 🌍 BuscaCEP API
+# 📦 Projeto de Consulta e Gerenciamento de Endereços por CEP
 
-A BuscaCEP API é uma aplicação em Java que permite consultar e cadastrar informações de endereços a partir de um serviço de API externo.
+Este projeto é uma aplicação Spring Boot que permite consultar, cadastrar, excluir e listar endereços a partir de um CEP fornecido. Utiliza uma API externa para obter as informações do endereço e armazena essas informações em um banco de dados relacional.
 
-## 🔍 Funcionalidades
+## ✨ Funcionalidades
 
-- **Consulta e Cadastro de CEP**: Permite consultar informações de endereço a partir de um CEP fornecido. Os dados do endereço são obtidos de uma API externa e salvos no banco de dados da aplicação.
+- **Consulta de Endereço**: Consulta um endereço a partir de um CEP fornecido e retorna as informações detalhadas.
+- **Cadastro de Endereço**: Cadastra um novo endereço no banco de dados a partir de um CEP fornecido.
+- **Exclusão de Endereço**: Exclui um endereço cadastrado no banco de dados a partir de um CEP fornecido.
+- **Listagem de Endereços**: Lista todos os endereços cadastrados no banco de dados.
 
-- **Restrições**:
-  - A aplicação não permite cadastrar o mesmo CEP mais de uma vez.
-  - CEPs inválidos não são salvos no banco de dados.
+## 🚀 Como Usar
 
-## 🛠️ Tecnologias Utilizadas
+### Pré-requisitos
 
-- Java 1.8
-- Spring Boot
-- Spring Data JPA
-- OkHttp
-- Gson
-- Banco de dados SQL Server 2017
-- DBeaver
+- Java 11 ou superior
+- Maven
+- Banco de dados configurado (neste caso, SQL Server)
 
-## ⚙️ Como Usar
+### Configuração
 
-### 🛠️ Configuração
+1. Clone o repositório:
+    ```sh
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    ```
+2. Configure o banco de dados no arquivo `application.properties`:
+    ```properties
+    spring.datasource.url=jdbc:sqlserver://localhost;databaseName=ApiConsultaCep
+    spring.datasource.username=seu-usuario
+    spring.datasource.password=sua-senha
+    spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
 
-1. Clone o repositório.
-2. Configure as propriedades do banco de dados no arquivo `application.properties`.
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
 
-### ▶️ Execução
+    logging.file.name=app.log
+    logging.level.root=INFO
+    ```
 
-1. Compile o projeto e execute a classe `BuscaCepApplication`.
-2. Acesse a API através da URL base `http://localhost:8080/api/cep`.
+### Executando a Aplicação
 
-## 🚀 Desenvolvimento
+1. Navegue até o diretório do projeto:
+    ```sh
+    cd seu-repositorio
+    ```
+2. Execute o projeto utilizando Maven:
+    ```sh
+    mvn spring-boot:run
+    ```
 
-Este projeto utiliza Spring Boot para facilitar o desenvolvimento de APIs RESTful e integração com bancos de dados usando Spring Data JPA.
+### Endpoints
 
-## 📚 Tabela Explicativa das Classes
+#### Consultar Endereço
 
-| Classe            | Descrição                                                                 |
-|-------------------|---------------------------------------------------------------------------|
-| EnderecoController | Controlador REST que gerencia as requisições relacionadas aos endereços.   |
-| Endereco          | Modelo de dados que representa um endereço, persistido no banco de dados. |
-| EnderecoRepository| Interface que estende JpaRepository para operações de banco de dados.     |
-| ConsumoApi         | Serviço responsável por consumir a API externa e persistir os dados.       |
-| InvalidCepException| Exceção personalizada para tratar erros de CEP inválido.                  |
-| BuscaCepApplication| Classe principal que inicia a aplicação Spring Boot.                       |
+- **URL**: `/api/cep/consultar`
+- **Método**: `POST`
+- **Parâmetros**: `cep` (String)
+- **Descrição**: Consulta um endereço pelo CEP fornecido.
+
+#### Cadastrar Endereço
+
+- **URL**: `/api/cep/cadastrar`
+- **Método**: `POST`
+- **Parâmetros**: `cep` (String)
+- **Descrição**: Cadastra um novo endereço no banco de dados.
+
+#### Excluir Endereço
+
+- **URL**: `/api/cep/excluir`
+- **Método**: `DELETE`
+- **Parâmetros**: `cep` (String)
+- **Descrição**: Exclui um endereço do banco de dados pelo CEP fornecido.
+
+## 📂 Estrutura do Projeto
+
+| Classe                | Função                                                                 |
+|-----------------------|------------------------------------------------------------------------|
+| `EnderecoController`  | Controlador REST para gerenciar os endpoints de consulta, cadastro, exclusão e listagem de endereços. |
+| `Endereco`            | Modelo de dados para representar um endereço.                                           |
+| `EnderecoRepository`  | Repositório JPA para realizar operações de banco de dados com o modelo `Endereco`.        |
+| `ConsumoApi`          | Serviço para consumir a API externa e obter informações de endereço a partir de um CEP.  |
+| `InvalidCepException` | Exceção personalizada para tratar CEPs inválidos.                                       |
+| `BuscaCepApplication` | Classe principal para iniciar a aplicação Spring Boot.                                  |
 
 ## 🌐 Conecte-se comigo
 
 Para saber mais sobre meus estudos e projetos em Java e POO, você pode me encontrar no [LinkedIn](https://www.linkedin.com/in/joao-pedro-gon%C3%A7alves-viana-de-souza-a33a84242/).
+
