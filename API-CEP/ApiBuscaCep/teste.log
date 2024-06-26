@@ -1,0 +1,58 @@
+2024-06-26 12:22:02.534  INFO 6156 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : Starting BuscaCepApplication using Java 1.8.0_202 on PASA-VDA-02 with PID 6156 (C:\Users\81049188\Downloads\API-CEP\ApiBuscaCep\target\classes started by 81049188 in C:\Users\81049188\Downloads\API-CEP\ApiBuscaCep)
+2024-06-26 12:22:02.541  INFO 6156 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : No active profile set, falling back to default profiles: default
+2024-06-26 12:22:03.067  WARN 6156 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-06-26 12:22:04.609  INFO 6156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-26 12:22:04.788  INFO 6156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interfaces.
+2024-06-26 12:22:06.793  INFO 6156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-06-26 12:22:06.821  INFO 6156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-26 12:22:06.822  INFO 6156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-06-26 12:22:07.170  INFO 6156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-26 12:22:07.173  INFO 6156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4447 ms
+2024-06-26 12:22:08.076  INFO 6156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-26 12:22:08.264  INFO 6156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-06-26 12:22:08.888  INFO 6156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-06-26 12:22:09.221  INFO 6156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-26 12:22:10.278  INFO 6156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-26 12:22:10.327  INFO 6156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-26 12:22:12.638  INFO 6156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-26 12:22:12.658  INFO 6156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-26 12:22:13.919  WARN 6156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-26 12:22:14.228  INFO 6156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-26 12:22:14.841  INFO 6156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-26 12:22:14.870  INFO 6156 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : Started BuscaCepApplication in 13.596 seconds (JVM running for 14.874)
+2024-06-26 12:22:30.853  INFO 6156 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-26 12:22:30.870  INFO 6156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-26 12:22:30.872  INFO 6156 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-06-26 13:04:07.285  WARN 6156 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 2627, SQLState: 23000
+2024-06-26 13:04:07.290 ERROR 6156 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : Violação da restrição UNIQUE KEY 'uk_cep'. Não é possível inserir a chave duplicada no objeto 'dbo.endereco'. O valor de chave duplicada é (24416000).
+2024-06-26 13:09:36.311  INFO 6156 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-06-26 13:09:36.313  INFO 6156 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-26 13:09:36.318  INFO 6156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-26 13:09:36.333  INFO 6156 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-26 13:09:50.671  INFO 11260 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : Starting BuscaCepApplication using Java 1.8.0_202 on PASA-VDA-02 with PID 11260 (C:\Users\81049188\Downloads\API-CEP\ApiBuscaCep\target\classes started by 81049188 in C:\Users\81049188\Downloads\API-CEP\ApiBuscaCep)
+2024-06-26 13:09:50.677  INFO 11260 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : No active profile set, falling back to default profiles: default
+2024-06-26 13:09:51.243  WARN 11260 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2024-06-26 13:09:52.738  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-26 13:09:52.901  INFO 11260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2024-06-26 13:09:54.655  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-06-26 13:09:54.685  INFO 11260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-26 13:09:54.687  INFO 11260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-06-26 13:09:54.994  INFO 11260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-26 13:09:54.996  INFO 11260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4135 ms
+2024-06-26 13:09:55.835  INFO 11260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-26 13:09:56.017  INFO 11260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-06-26 13:09:56.603  INFO 11260 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-06-26 13:09:56.915  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-26 13:09:57.852  INFO 11260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-26 13:09:57.900  INFO 11260 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.SQLServerDialect
+2024-06-26 13:10:00.183  INFO 11260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-26 13:10:00.204  INFO 11260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-26 13:10:01.484  WARN 11260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-26 13:10:01.852  INFO 11260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-06-26 13:10:02.602  INFO 11260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-26 13:10:02.631  INFO 11260 --- [main] i.g.JoaoVianaSouza.BuscaCepApplication   : Started BuscaCepApplication in 13.183 seconds (JVM running for 14.584)
+2024-06-26 13:10:57.203  INFO 11260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-26 13:10:57.204  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-26 13:10:57.213  INFO 11260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-06-26 13:10:58.176  WARN 11260 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 2627, SQLState: 23000
+2024-06-26 13:10:58.178 ERROR 11260 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Violação da restrição UNIQUE KEY 'uk_cep'. Não é possível inserir a chave duplicada no objeto 'dbo.endereco'. O valor de chave duplicada é (24416000).
