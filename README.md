@@ -15,12 +15,14 @@ Este projeto é uma aplicação Spring Boot que permite consultar, cadastrar, ex
 - Java 11 ou superior
 - Maven
 - Banco de dados configurado (neste caso, SQL Server)
+- Postaman
+- DBeaver (para gerenciar o SQL Server)
 
 ### Configuração
 
 1. Clone o repositório:
     ```sh
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/JoaoVianaSouza/API-CEP.git
     ```
 2. Configure o banco de dados no arquivo `application.properties`:
     ```properties
@@ -41,7 +43,7 @@ Este projeto é uma aplicação Spring Boot que permite consultar, cadastrar, ex
 
 1. Navegue até o diretório do projeto:
     ```sh
-    cd seu-repositorio
+    cd https://github.com/JoaoVianaSouza/API-CEP/
     ```
 2. Execute o projeto utilizando Maven:
     ```sh
