@@ -7,6 +7,7 @@ Este projeto é uma aplicação Spring Boot que permite consultar, cadastrar, ex
 - **Consulta de Endereço**: Consulta um endereço a partir de um CEP fornecido e retorna as informações detalhadas.
 - **Cadastro de Endereço**: Cadastra um novo endereço no banco de dados a partir de um CEP fornecido.
 - **Exclusão de Endereço**: Exclui um endereço cadastrado no banco de dados a partir de um CEP fornecido.
+- **Listar Endereços**: Mostra todos os endereços cadastrados no banco de dados.
 
 ## 🚀 Como Usar
 
