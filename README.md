@@ -38,6 +38,8 @@ Este projeto é uma aplicação Spring Boot que permite consultar, cadastrar, ex
 
     logging.file.name=app.log
     logging.level.root=INFO
+    
+    endereco.base.url=https://brasilapi.com.br/api/cep/v1/
     ```
 
 ### Executando a Aplicação
